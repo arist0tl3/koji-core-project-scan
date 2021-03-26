@@ -17,14 +17,16 @@ class KojiCoreProjectScan extends Command {
     // add --version flag to show CLI version
     version: flags.version({ char: 'v' }),
     // add --ignore-dir flag to ignore certain directories
-    'ignore-dir': flags.string({
+    ignore: flags.string({
+      char: 'i',
+      description: 'ignore directories (applies recursively)',
       multiple: true,
     }),
   };
 
   async run() {
     const {
-      flags: { 'ignore-dir': ignoreDirectories = [] },
+      flags: { ignore: ignoreDirectories = [] },
     } = this.parse(KojiCoreProjectScan);
 
     const rootDir = process.cwd();

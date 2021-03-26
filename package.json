@@ -1,7 +1,7 @@
 {
   "name": "@arist0tl3/koji-core-project-scan",
   "description": "Look for deprecated/broken code in your Koji project related to the @withkoji/core package.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sean @arist0tl3",
   "bin": {
     "scan-project": "./bin/run"
